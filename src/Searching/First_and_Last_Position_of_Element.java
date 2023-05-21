@@ -55,5 +55,5 @@ static int search(int[] arr, int target, boolean isStart)
         }
     }
     return ans;
-}
+    }
 }
