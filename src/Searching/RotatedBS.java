@@ -6,7 +6,7 @@ package Searching;
 public class RotatedBS {
     public static void main(String[] args) {
         int[] arr = {4,5,6,7,0,1,2};
-        System.out.println(search(arr,6));
+        System.out.println(search(arr,3));
     }
     static int search(int[] arr,int target)
     {
@@ -15,7 +15,7 @@ public class RotatedBS {
         {
             return binarySearch(arr,target,0,arr.length - 1);
         }
-        if(pivot == target)
+        if(arr[pivot] == target)
         {
             return pivot;
         }
