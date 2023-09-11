@@ -1,0 +1,31 @@
+Mountain Array:(Find Peak element from array); Ex: {2,3,4,6,4,3,1}
+        int start = 0;
+        int end = arr.length - 1;
+        while(start<end)
+        {
+            int mid = start + (end - start) / 2 ;
+            if(arr[mid] > arr[mid + 1])
+            {
+                end = mid;
+            }
+            else
+            {
+                start = mid + 1;
+            }
+        }
+        return start;
+    
+-> if(arr[mid] > arr[mid + 1])
+            {
+                end = mid;
+            }
+            why I use here : end = mid ?
+            Because, when i find the mid element, and check with [mid+1] element and find that mid element is greater, than there is no posibility that the peak element in the right side, rather the mid element is one of my possible ans. so i update the end with mid value.
+
+-> else
+            {
+                start = mid + 1;
+            }
+            why I use here : start = mid + 1?
+            here as i get that arr[mid] < arr[mid+1], again my motive is find the grater value,
+            so mid element is eleminated. thats why i update start = mid + 1;
